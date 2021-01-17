@@ -118,3 +118,28 @@ fener 1907</br>
 calisan [isno=0, isim_is=null, isim=fener, no=1907]
 </p>
 </details>
+
+
+##Hata İdaresi (Exception Handling)
+Genellikle hataların derlenme zamanında(compile time) görülmesi istenir çünkü düzgün derlendiği için çalıştığı zannedilen bir ürün(yazılım) iş üstündeyken hata vermesi feci sonuçlar doğurabilir. Gerçi bu istek sınav zamanlarında geçerli değildir :). Her türlü hata için kullanabileceğiniz örnek bir kod kırpıntısını(code snippet) aşağıda görebilirsiniz. Bu kırpıntıda yalnızca 0'a bölüm hatası(divide by zero error) örnek gösterilmiştir ama herhangi bir hata için de bu kırpıntıyı kullanabilirsiniz
+```java
+import java.lang.Throwable; //tüm hataların en üst kümesi(super class)*1
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    try//hata olursa bunun içinde olsun dediğimiz blok
+    {
+        System.out.println ("Hello World");
+        int a = 666;
+        int b = 0;
+        System.out.println (a / b);//0'a bolme hatası
+    } catch (Throwable e)//ne hatası olursa olsun throw edebilmek için, çünkü Throwable tüm hataların en üst kümesidir
+    {
+      System.out.println ("Dostum burada bir sikinti var!\n" + e);//hata olduğunda ne olduğunu(neyin throw edildiğini) e ile çıktı veririz.
+    }
+  }
+}
+```
+![*1](https://www.javainterviewpoint.com/exception-handling-in-java-a-complete-guide-to-java-exceptions/)
