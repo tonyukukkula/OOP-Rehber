@@ -119,6 +119,7 @@ calisan [isno=0, isim_is=null, isim=fener, no=1907]
 </p>
 </details>
 
+*Çok önemli bilgi-1: interface görürseniz, interface'den kalıtılmış sınıflarda interface içinde soyutlanmış tüm fonksiyonları boş olsa bile yazmayı unutmayınız yoksa derleyici hatası alırsınız.*
 
 ## Hata İdaresi (Exception Handling)
 Genellikle hataların derlenme zamanında(compile time) görülmesi istenir çünkü düzgün derlendiği için çalıştığı zannedilen bir ürün(yazılım) iş üstündeyken hata vermesi feci sonuçlar doğurabilir. Gerçi bu istek sınav zamanlarında geçerli değildir :). Her türlü hata için kullanabileceğiniz örnek bir kod kırpıntısını(code snippet) aşağıda görebilirsiniz. Bu kırpıntıda yalnızca 0'a bölüm hatası(divide by zero error) örnek gösterilmiştir ama herhangi bir hata için de bu kırpıntıyı kullanabilirsiniz
